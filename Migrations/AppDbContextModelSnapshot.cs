@@ -153,7 +153,7 @@ namespace onlineTickets.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Order");
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("onlineTickets.Models.OrderItem", b =>
