@@ -20,14 +20,13 @@ namespace onlineTickets.Controllers
             _ordersService = ordersService;
         }
 
-        ////public async Task<IActionResult> Index()
-        ////{
-        ////    string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        ////   string userRole = User.FindFirstValue(ClaimTypes.Role);
+        public async Task<IActionResult> Index()
+        {
+            string userId = "";
 
-        ////    var orders = await _ordersService.GetOrdersByUserIdAndRoleAsync(userId, userRole);
-        ////    return View(orders);
-        ////}
+            var orders = await _ordersService.GetOrderByUserIdAsync(userId);
+            return View(orders);
+        }
 
         public IActionResult ShoppingCart()
         {
