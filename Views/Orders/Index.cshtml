@@ -14,8 +14,9 @@
             <thead>
                 <tr>
                     <th>Order ID</th>
-                    <td>Items</td>
+                    <th>Items</th>
                     <th>Total</th>
+                    <th>User</th>
           
                 </tr>
             </thead>
@@ -39,7 +40,7 @@
                         <td class="align-middle">
                             @order.OrderItems.Select(m => m.Movie.Price * m.Amount).Sum().ToString("c")
                         </td>
-                    
+                          <td class="align-middle"> - </td>
                         </tr>
                 }
             </tbody>

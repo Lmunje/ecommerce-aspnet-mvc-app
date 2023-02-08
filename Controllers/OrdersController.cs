@@ -24,7 +24,7 @@ namespace onlineTickets.Controllers
         {
             string userId = "";
 
-            var orders = await _ordersService.GetOrderByUserIdAsync(userId);
+            var orders = await _ordersService.GetOrdersByUserIdAsync(userId);
             return View(orders);
         }
 

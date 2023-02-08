@@ -11,7 +11,7 @@ namespace onlineTickets.Data.Services
             _context = context;
         }
 
-        public async Task<List<Order>> GetOrderByUserIdAsync(string userId)
+        public async Task<List<Order>> GetOrdersByUserIdAsync(string userId)
         {
             var orders = await _context.Orders.Include(n => n.OrderItems).ThenInclude(n => n.Movie).Where(n => n.UserId == userId).ToListAsync();
 
