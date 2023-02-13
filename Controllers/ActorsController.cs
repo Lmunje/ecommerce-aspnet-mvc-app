@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using onlineTickets.Data;
 using onlineTickets.Data.Services;
+using onlineTickets.Data.Static;
 using onlineTickets.Models;
 
 namespace onlineTickets.Controllers
 {
+    [Authorize(Roles = UserRoles.Admin)]
     public class ActorsController : Controller
     {
         private readonly IActorsService _service;
@@ -13,7 +16,8 @@ namespace onlineTickets.Controllers
         {
             _service = service;
         }
-    
+
+        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
             var data = await _service.GetAllAsync();
@@ -36,8 +40,9 @@ namespace onlineTickets.Controllers
             await _service.AddAsync(actor);
             return RedirectToAction(nameof(Index));   
          }
-          //Get: Actors/details/1
-          public async Task<IActionResult> Details(int id)
+        //Get: Actors/details/1
+        [AllowAnonymous]
+        public async Task<IActionResult> Details(int id)
         {
             var actorDetails = await _service.GetByIdAsync(id);
             if (actorDetails == null) return View("NotFound");
