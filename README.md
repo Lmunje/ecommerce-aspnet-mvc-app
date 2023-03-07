@@ -9,8 +9,7 @@ TOOLS USED
 -BOOTSTRAP IMPORTING CUSTOM STYLES AND TEMPLATE
 -AZURE SERVER FOR HOSTING MY APP
 
-![Admin Homepage2](https://user-images.githubusercontent.com/46854325/223480265-6ddb97e8-0488-4275-95dc-a15a22c06aff.jpg)
-![Admin Hompage1](https://user-images.githubusercontent.com/46854325/223480267-950dc575-6921-4ba1-afd6-6bab5b75abc3.jpg)
+
 ![App User movie page](https://user-images.githubusercontent.com/46854325/223480280-3c5904b1-cb98-427c-a90c-288dd58f5d67.jpg)
 ![Cinema Delete page](https://user-images.githubusercontent.com/46854325/223480374-05ab3468-5a03-4d6a-8f8d-ee3f96d6c6e9.jpg)
 ![Cinema Details page](https://user-images.githubusercontent.com/46854325/223480376-d4360f21-74b8-4f4d-a6bd-f7c3ebe17bd8.jpg)
